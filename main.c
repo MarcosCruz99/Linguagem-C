@@ -1,54 +1,99 @@
 #include <stdio.h>
-
-
-int main()
-{
-    char v1, v2, v3;
-    printf("Informe o primeiro caracter:");
-    scanf("%c", &v1);
-    printf("Informe o segundo caracter:");
-    scanf(" %c", &v2);
-    printf("Informe o terceiro caracter:");
-    scanf(" %c", &v3);
-    printf("%c %c %c\n", v1, v2, v3);
-   return 0;
-}
-
-
 /*
-int main ()
-{
-    int a, b, c, x;
-    printf("Informe o valor de A:");
-    scanf("%d", &a);
-    printf("Informe o valor de B:");
-    scanf("%d", &b);
-    printf("Informe o valor de C:");
-    scanf("%d", &c);
-    x = 2 * ((a - c)/8) - 5 * b;
-    printf("Valor de X: %d\n", x);
-    return 0;
-}
-*/
+main ()
 
-/*
-int main ()
 {
-    int num1, num2, soma, mult, sub, div, resto;
-    printf("Informe o primeiro numero:");
-    scanf("%d", &num1);
+    int n1, n2, soma;
+    printf("Informe o primeiro número:\n");
+    scanf("%d", &n1);
     printf("Informe o segundo numero:");
-    scanf("%d", &num2);
-    soma = num1 + num2;
-    sub = num1 - num2;
-    mult = num1 * num2;
-    div = num1 / num2;
-    resto = num1 % num2;
-    printf("Soma: %d\n", soma);
-    printf("Subtracao: %d\n",sub);
-    printf("Multiplicacao: %d\n", mult);
-    printf("Divisao: %d\n", div);
-    printf("Resto da divisao: %d\n", resto);
+    scanf("%d", &n2);
+    soma = n1 + n2;
+    if(soma > 10) {
+        printf("A soma é: %d", soma);
+    }
+    else{
+        printf("Soma menor que 10");
+    }
     return 0;
 }
 */
+/*
+{
+    int n;
+    printf("Informe um numero:\n");
+    scanf("%d", &n);
+    if(n > 0){
+        printf("Numero positivo!");
+    }
+    else if(n == 0){
+        printf("Numero nulo!");
+    }
+    else{
+        printf("Numero negativo!");
+    }
+    return 0;
+}
+*/
+/*
+{
+    int n1, n2;
+    printf("Informe o primeiro numero:");
+    scanf("%d", &n1);
+    printf("Informe o segundo numero:");
+    scanf("%d", &n2);
+    if(n1 % 2== 0 && n2 % 2 == 0){
+        printf("Os dois numero sao pares!");
+    }
+    else if(n1 % 2 == 0 || n2 % 2 == 0){
+        printf("Um dos dois numero eh par!");
+    }
+    else{
+        printf("Os dois numeros sao impares!");
+    }
+    return 0;
+}
+*/
+/*
+{
+    int n1, n2;
+    printf("Informe o primeiro numero:");
+    scanf("%d", &n1);
+    printf("Informe o segundo numero:");
+    scanf("%d", &n2);
+    if(n1 % 2== 0 && n2 % 2 == 0){
+            printf("Os dois numero sao pares!");
+    }
+    else if(n1 % 2== 0){
+        printf("O primeiro numero eh par!");
+    }
+    else if(n2 % 2 == 0){
+        printf("O segundo numero eh par!");
+    }
+    else{
+        printf("Os dois numeros sao impares!");
+    }
+    return 0;
+}
+*/
+int main ()
+{
+    char sexo;
+    double altura, peso;
+    printf("Informe o sexo:");
+    scanf("%c", &sexo);
+    printf("Informe a altura:");
+    scanf("%lf", &altura);
+    if(sexo == 'M' || sexo == 'm'){
+        peso = (72.7 * altura) - 58;
+        printf ("Peso ideal: %.2lf\n", peso);
+    }
+    else if(sexo == 'f' || sexo == 'F'){
+        peso = (62.1 * altura) - 44.7;
+        printf("Peso ideal: %.2lf\n", peso);
+    }
+    else{
+        printf("Opcao invalida!");
+    }
+    return 0;
+}
